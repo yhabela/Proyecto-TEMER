@@ -1,0 +1,109 @@
+/* PALETA DE COLORES RETRO */
+:root {
+--retro-dark: #1a1a2e; /* Fondo principal */
+--retro-dark2: #16213e; /* Header/Footer */
+--retro-shadow: #0f3460; /* Bordes y sombras */
+
+--retro-accent1: #e94560; /* Botón 1 */
+--retro-accent2: #3ddc97; /* Botón 2 */
+--retro-accent3: #f4c95d; /* Botón3 */
+--retro-accent4: #5c81e5; /* Botón 4 */
+
+--retro-hover: #2c1b1f; /* Hover y detalles */
+--retro-light: #ffffff; /* Texto */
+}
+
+/*----------------------------------------------------*/
+/* FUENTE PIXELADA */
+@font-face {
+font-family: 'PixelFont';
+src: url('https://fonts.cdnfonts.com/s/26527/PixelOperator.woff') format('woff');
+}
+
+
+/*----------------------------------------------------*/
+/* HEADER */
+.header {
+    background-color:(var --retro-dark2);
+    padding: 20px;
+    border-bottom: 4px solid var(--retro-shadow);
+}
+
+.header h1 {
+    font-size: 2.6rem;
+    text-shadow: 2px 2px var(--retro-shadow);
+}
+
+/*----------------------------------------------------*/
+/* BODY - Estilo de todo lo que se encuentra entre el header y el footer, en general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PixelFont', monospace;
+    background-color: var(--retro-dark);
+    color: var(--retro-light);
+    text-align: center;
+}
+
+
+/*----------------------------------------------------*/
+/* CONTENIDO */
+.main-container {
+    padding: 30px;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 500px;
+    margin: auto;
+}
+
+
+/* COLORES ARCADE DISTINTOS PARA CADA BOTÓN*/
+.menu a:nth-child(1) {
+background-color: var(--retro-accent1); /*rojo retro*/
+}
+
+.menu a:nth-child(2) {
+background-color: var(--retro-accent2); /* verde retro */
+}
+
+.menu a:nth-child(3) {
+background-color: var(--retro-accent3); /* amarillo retro */
+}
+
+.menu a:nth-child(4) {
+background-color: var(--retro-accent4); /* azul retro */
+}
+
+/* ESTILO DE LOS BOTONES EN GENERAL*/
+.menu-btn {
+    padding: 40px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    border: 3px solid var(--retro-shadow);
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.menu-btn:hover {
+    background-color: var(--retro-accent1);
+    transform: scale(1.05);
+}
+
+/*----------------------------------------------------*/
+/* FOOTER */
+.footer {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: var(--retro-dark2);
+    border-top: 4px solid var(--retro-shadow);
+    font-size: 0.9rem;
+}
